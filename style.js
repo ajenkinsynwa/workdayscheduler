@@ -4,12 +4,12 @@ function updateTime() {
 
     $("#currentDay").text(today.format("dddd, MMM Do YYYY, h:mm.ss"));
 
-    let now = moment().format('kk');
+    let now = moment().format('hh');
     for (let i = 0; i < scheduleELarray.length; i++) {
         scheduleELarray[i].removeClass("future past present");
 
 
-        if (now > scheduleELarray[i].data('hour')) {
+        if (now > scheduleELarray[i].data("hour")) {
             scheduleELarray[i].addClass("past");
 
         } else if (now === scheduleELarray[i].attr("data-hour")) {
@@ -66,10 +66,13 @@ function handleFormSubmit(event) {
     let targetText = btnClicked.siblings("textarea");
 
     let targetTimeBlock = targetText.data("hour");
+    console.log(targetTimeBlock);
 
-    localStorage.setItem("time block" + targetTimeBlock, targetText.val());
+    localStorage.setItem("time block" + targetTimeBlock, targetText.val())
 
+    
 }
+
 saveBttn.on("click", handleFormSubmit);
 
 

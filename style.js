@@ -1,27 +1,28 @@
 function updateTime() {
-    let today = moment ();
+    let today = moment();
 
 
-$("#currentDay").text(today.format("dddd, MMM Do YYYY, h:mm.ss"));
+    $("#currentDay").text(today.format("dddd, MMM Do YYYY, h:mm.ss"));
 
-let now = moment().format('kk');
-for (let i = 0; i < scheduleELarray.length; i++){
-    scheduleELarray[i].removeClass("future past present");
+    let now = moment().format('kk');
+    for (let i = 0; i < scheduleELarray.length; i++) {
+        scheduleELarray[i].removeClass("future past present");
 
 
-if (now > scheduleELarray[i].data('hour')) {
-    scheduleELarray[i].addClass("past");
+        if (now > scheduleELarray[i].data('hour')) {
+            scheduleELarray[i].addClass("past");
 
-} else if  (now === scheduleELarray[i].attr("data-hour")) {
-    scheduleELarray[i].addClass("present");
+        } else if (now === scheduleELarray[i].attr("data-hour")) {
+            scheduleELarray[i].addClass("present");
 
-} else {
-    scheduleELarray[i].addClass("future");
+        } else {
+            scheduleELarray[i].addClass("future");
+        }
+    }
 }
-}}
 
 
-console.log("Current Hour" + "hour");
+
 let saveBttn = $(".save-icon");
 let containerEl = $(".container");
 let nineAm = $("#09am");
@@ -60,14 +61,16 @@ function handleFormSubmit(event) {
     event.preventDefault();
 
 
-let btnClicked = $(event.currentTarget);
+    let btnClicked = $(event.currentTarget);
 
-let targetText = btnClicked.siblings("textarea"); 
+    let targetText = btnClicked.siblings("textarea");
 
-let targetTimeBlock = targetText.data("hour");
+    let targetTimeBlock = targetText.data("hour");
 
-localStorage.setItem("time block" + targetTimeBlock, targetText.val());
+    localStorage.setItem("time block" + targetTimeBlock, targetText.val());
 
 }
 saveBttn.on("click", handleFormSubmit);
+
+
 

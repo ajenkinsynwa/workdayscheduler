@@ -4,7 +4,7 @@ function updateTime() {
 
     $("#currentDay").text(today.format("dddd, MMM Do YYYY, h:mm.ss"));
 
-    let now = moment().format('kk');
+    let now = moment().format("kk");
     for (let i = 0; i < scheduleELarray.length; i++) {
         scheduleELarray[i].removeClass("future past present");
 
@@ -25,8 +25,8 @@ function updateTime() {
 
 let saveBttn = $(".save-icon");
 let containerEl = $(".container");
-let nineAm = $("#09am");
-let tenAm = $("#10am");
+let nineAm = $("#9AM");
+let tenAm = $("#10AM");
 let elevenAm = $("#11am");
 let twelveAm = $("#12pm");
 let onePm = $("#13pm");

@@ -27,13 +27,13 @@ let saveBttn = $(".save-icon");
 let containerEl = $(".container");
 let nineAm = $("#9AM");
 let tenAm = $("#10AM");
-let elevenAm = $("#11am");
-let twelveAm = $("#12pm");
-let onePm = $("#13pm");
-let twoPm = $("#14pm");
-let threePm = $("#15pm");
-let fourPm = $("#16pm");
-let fivePm = $("#17pm");
+let elevenAm = $("#11AM");
+let twelveAm = $("#12PM");
+let onePm = $("#1PM");
+let twoPm = $("#2PM");
+let threePm = $("#3PM");
+let fourPm = $("#4PM");
+let fivePm = $("#5PM");
 
 let scheduleELarray = [
     nineAm,

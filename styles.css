@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1;
   }
@@ -8,7 +8,7 @@ body {
     background: transparent;
     border: none;
     resize: none;
-    color: #000000;
+    color: #29494b;
     border-left: 1px solid black;
     padding: 10px;
   }
@@ -16,7 +16,7 @@ body {
   .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: black;
+    color: rgb(29, 121, 135);
     border-radius: 0;
     border-bottom: 10px solid black;
   }
@@ -68,21 +68,7 @@ body {
   .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
+    background-color: #06aed5;
   }
 
 
-
-.clock {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 60px;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-    translateY(-50%);
-    color: #17D4FE;
-    font-size: 60px;
-    font-family: Orbitron;
-    letter-spacing: 7px;
-}
